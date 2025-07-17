@@ -1,11 +1,22 @@
 body {
-    font-family: 'Vazirmatn', sans-serif; /* فونت جدید Vazirmatn */
+    font-family: 'Vazirmatn', sans-serif; /* فونت اصلی وزیرمتن */
     direction: rtl; /* تنظیم راست‌چین برای کل صفحه */
     text-align: right; /* تراز متن به راست */
     margin: 0;
     padding: 0;
     background-color: #e0f2f7; /* رنگ پس‌زمینه روشن، کمی مایل به آبی */
     color: #333;
+}
+
+/* اعمال صریح فونت به عناصر ورودی، دکمه‌ها و خروجی‌های کد */
+input[type="text"], 
+textarea, 
+select,
+button,
+pre,
+h1, h2, h3, h4,
+p, ul, li, a {
+    font-family: 'Vazirmatn', sans-serif; 
 }
 
 header {
@@ -110,16 +121,6 @@ button:hover {
 
 .hidden {
     display: none;
-}
-
-pre {
-    background-color: #eee;
-    padding: 10px;
-    border-radius: 4px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    text-align: right; /* راست‌چین کردن متن پیش‌فرمت شده */
-    direction: rtl; /* راست‌چین کردن جهت متن پیش‌فرمت شده */
 }
 
 ul {
