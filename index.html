@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل جذب و استخدام مدیر محصول - سحاب</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="لوگوی شرکت سحاب" class="company-logo">
+        <h1>پنل جذب و استخدام مدیر محصول</h1>
+    </header>
+    <main>
+        <section class="candidate-input">
+            <h2>افزودن / جستجوی کاندیدا</h2>
+            <input type="text" id="candidateNameInput" placeholder="نام کامل متقاضی را وارد کنید">
+            <button id="searchCreateBtn">مشاهده / ایجاد کاندیدا</button>
+        </section>
+
+        <section id="candidateDetails" class="hidden">
+            <h2 id="candidateDetailsName"></h2>
+
+            <div class="card">
+                <h3>آپلود رزومه (PDF)</h3>
+                <input type="file" id="resumeUploadInput" accept=".pdf">
+                <button id="uploadResumeBtn">آپلود رزومه</button>
+                <p id="resumeUploadStatus"></p>
+                <a id="downloadResumeLink" href="#" target="_blank" class="hidden">مشاهده فایل رزومه</a>
+            </div>
+
+            <div class="card">
+                <h3>تحلیل رزومه (هوش مصنوعی)</h3>
+                <div class="summary-box">
+                    <h4>خلاصه سریع:</h4>
+                    <p id="aiResumeSummaryHeadline">اینجا خلاصه سریع تحلیل هوش مصنوعی نمایش داده خواهد شد.</p>
+                    <ul id="aiResumeSummaryKeyTakeaways">
+                        <li>نکته کلیدی ۱</li>
+                        <li>نکته کلیدی ۲</li>
+                    </ul>
+                    <p>امتیاز کلی تناسب: <span id="aiOverallFitScore">N/A</span>/10</p>
+                    <p>پیشنهاد مصاحبه: <span id="aiGoToInterview">N/A</span></p>
+                </div>
+                <h4>تحلیل توصیفی کامل:</h4>
+                <pre id="aiResumeAnalysisFull">اینجا تحلیل توصیفی کامل رزومه توسط هوش مصنوعی نمایش داده خواهد شد.</pre>
+            </div>
+
+            <div class="card">
+                <h3>آپلود فرم مصاحبه اولیه (عکس/PDF)</h3>
+                <input type="file" id="initialInterviewFormUploadInput" accept=".pdf, .jpg, .jpeg, .png">
+                <button id="uploadInitialInterviewBtn">آپلود فرم</button>
+                <p id="initialInterviewUploadStatus"></p>
+                <a id="downloadInitialInterviewFormLink" href="#" target="_blank" class="hidden">مشاهده فایل فرم</a>
+            </div>
+
+            <div class="card">
+                <h3>تحلیل مصاحبه اولیه (هوش مصنوعی)</h3>
+                <pre id="aiInitialInterviewAnalysis">اینجا تحلیل مصاحبه اولیه توسط هوش مصنوعی نمایش داده خواهد شد.</pre>
+            </div>
+
+            <div class="card">
+                <h3>سناریو پیشنهادی مصاحبه تخصصی (هوش مصنوعی)</h3>
+                <pre id="aiSpecializedInterviewScenario">اینجا سناریو پیشنهادی هوش مصنوعی برای مصاحبه تخصصی نمایش داده خواهد شد.</pre>
+            </div>
+
+            <div class="card">
+                <h3>یادداشت‌های مصاحبه‌کننده</h3>
+                <textarea id="interviewerNotes" rows="5" placeholder="یادداشت‌های خود را اینجا وارد کنید"></textarea>
+                <button id="saveNotesStatusBtn">ذخیره یادداشت‌ها</button>
+            </div>
+
+            </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
