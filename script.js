@@ -9,7 +9,7 @@ function setupEventListeners() {
     document.getElementById('searchCreateBtn').addEventListener('click', handleCreateCandidate);
     document.getElementById('uploadResumeBtn').addEventListener('click', () => handleFileUpload('resume'));
     document.getElementById('uploadInitialInterviewBtn').addEventListener('click', () => handleFileUpload('initialInterviewForm'));
-    document.getElementById('saveNotesStatusBtn').addEventListener('click', saveNotes); // وضعیت حذف شده، فقط یادداشت‌ها
+    document.getElementById('saveNotesStatusBtn').addEventListener('click', saveNotes); 
 }
 
 // این تابع نام کاندیدا را نمایش می‌دهد و سپس رزومه را به Flask می‌فرستد
@@ -25,7 +25,6 @@ async function handleCreateCandidate() {
     document.getElementById('candidateDetails').classList.remove('hidden');
 
     // فعلاً فقط نام را نمایش می‌دهیم. آپلود رزومه با دکمه جداگانه انجام می‌شود.
-    // بعداً می‌توانیم لاجیک را طوری تغییر دهیم که بعد از ایجاد کاندیدا، فرم آپلود رزومه فعال شود.
 }
 
 // این تابع فایل را به سرور Flask می‌فرستد
